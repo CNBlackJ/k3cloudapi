@@ -1,0 +1,34 @@
+{
+  "name": "k3cloudapi",
+  "version": "1.1.1",
+  "description": "kingdee k3cloud webapi nodejs sdk.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kingdee",
+    "k3cloud",
+    "webapi",
+    "sdk",
+    "nodejs",
+    "js",
+    "web"
+  ],
+  "author": "vinli",
+  "email": "yes.heng@icloud.com",
+  "url": "https://cnblackj.github.io/",
+  "homepage": "https://github.com/CNBlackJ/k3cloudapi",
+  "bugs": {
+    "url": "https://github.com/CNBlackJ/k3cloudapi/issues",
+    "email": "yes.heng@icloud.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "qs": "^6.9.1"
+  },
+  "devDependencies": {
+    "sha1": "^1.1.1"
+  }
+}
