@@ -14,6 +14,8 @@ kingdee webapi nodejs sdk.
 
   - 其中`auth`节点需要金蝶k3cloud管理员进入 `系统管理->第三方系统认证->新增` 生成密钥和填写appid和app名称
 
+  - 如果需要自定义修改`axios`请求实例的初始化参数，可以通过给`config`添加`axiosInstanceConfig`属性进行覆盖默认的配置参数
+
 ```js
 {
   baseURL: 'http://erp.kingdee.com',
