@@ -1,4 +1,5 @@
 const axios = require('axios')
+const axiosUtils = require('axios/lib/utils')
 const qs = require('qs')
 const keysMapping = require('../utils/keysMapping')
 const validOptions = require('../utils/validOptions')
@@ -6,13 +7,15 @@ const validOptions = require('../utils/validOptions')
 module.exports = class K3cloud {
   constructor(config) {
     this.config = config
-    this.request = axios.create({
+    const { axiosInstanceConfig } = config
+    const defaultConfig = {
       baseURL: config.baseURL,
       timeout: 15000,
       headers: {
         'Content-Type': 'application/json'
       }
-    })
+    }
+    this.request = axios.create(axiosUtils.merge(defaultConfig, axiosInstanceConfig))
   }
 
   async auth(username = 'Administrator') {
